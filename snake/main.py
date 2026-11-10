@@ -30,6 +30,8 @@ def main():
                     elif evento.key == pygame.K_ESCAPE:
                         corriendo = False
 
+        juego.tick()
+
         surface.fill(config.FONDO_HUD)
         pygame.display.flip()
         reloj.tick(config.FPS)
