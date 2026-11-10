@@ -44,6 +44,9 @@ def main():
                         juego.girar(TECLAS[evento.key])
                     elif evento.key == pygame.K_ESCAPE:
                         juego.estado = game.MENU
+                else:  # PERDIO
+                    if evento.key == pygame.K_ESCAPE:
+                        juego.estado = game.MENU
 
         juego.tick()
 
