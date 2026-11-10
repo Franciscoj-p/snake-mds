@@ -6,6 +6,15 @@ Ejecutar con:  python -m snake.main
 import pygame
 
 from snake import config, game
+from snake.snake_logic import ABAJO, ARRIBA, DERECHA, IZQUIERDA
+
+# Flechas para mover la serpiente (US04)
+TECLAS = {
+    pygame.K_UP: ARRIBA,
+    pygame.K_DOWN: ABAJO,
+    pygame.K_LEFT: IZQUIERDA,
+    pygame.K_RIGHT: DERECHA,
+}
 
 
 def main():
@@ -29,6 +38,12 @@ def main():
                         juego.iniciar()
                     elif evento.key == pygame.K_ESCAPE:
                         corriendo = False
+
+                elif juego.estado == game.JUGANDO:
+                    if evento.key in TECLAS:
+                        juego.girar(TECLAS[evento.key])
+                    elif evento.key == pygame.K_ESCAPE:
+                        juego.estado = game.MENU
 
         juego.tick()
 
