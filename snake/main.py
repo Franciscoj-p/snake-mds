@@ -5,7 +5,7 @@ Ejecutar con:  python -m snake.main
 
 import pygame
 
-from snake import config, game
+from snake import config, game, screens, ui
 from snake.snake_logic import ABAJO, ARRIBA, DERECHA, IZQUIERDA
 
 # Flechas y WASD, para que dos personas puedan probar sin pelear o que por lo menos el jugador tenga dos opciones (US04)
@@ -47,7 +47,12 @@ def main():
 
         juego.tick()
 
-        surface.fill(config.FONDO_HUD)
+        if juego.estado == game.MENU:
+            screens.dibujar_menu(surface)          # US01
+        else:
+            surface.fill(config.FONDO_HUD)
+            ui.dibujar_juego(surface, juego)       # US02
+
         pygame.display.flip()
         reloj.tick(config.FPS)
 
