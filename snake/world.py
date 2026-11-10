@@ -1,4 +1,7 @@
-
+"""El mundo: limites del tablero, alimento y puntaje.
+Duenio: Persona 4
+Historias: US02 (limites), US06 (alimento), US07 (puntos), US09 (chocar)
+"""
 import random
 
 from snake import config

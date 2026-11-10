@@ -1,4 +1,4 @@
-
+"""Pruebas del modulo world (US06 y US07). Duenio: Persona 4."""
 import random
 
 from snake import config
