@@ -8,12 +8,12 @@ import pygame
 from snake import config, game
 from snake.snake_logic import ABAJO, ARRIBA, DERECHA, IZQUIERDA
 
-# Flechas para mover la serpiente (US04)
+# Flechas y WASD, para que dos personas puedan probar sin pelear o que por lo menos el jugador tenga dos opciones (US04)
 TECLAS = {
-    pygame.K_UP: ARRIBA,
-    pygame.K_DOWN: ABAJO,
-    pygame.K_LEFT: IZQUIERDA,
-    pygame.K_RIGHT: DERECHA,
+    pygame.K_UP: ARRIBA, pygame.K_w: ARRIBA,
+    pygame.K_DOWN: ABAJO, pygame.K_s: ABAJO,
+    pygame.K_LEFT: IZQUIERDA, pygame.K_a: IZQUIERDA,
+    pygame.K_RIGHT: DERECHA, pygame.K_d: DERECHA,
 }
 
 
