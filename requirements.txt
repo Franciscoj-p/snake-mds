@@ -1,2 +1,5 @@
-pygame==2.6.1
+# pygame-ce es el mismo pygame, mantenido por la comunidad, y tiene
+# instaladores listos para Python 3.13 y 3.14. El codigo no cambia:
+# se sigue escribiendo "import pygame".
+pygame-ce==2.5.8
 pytest==8.3.4
