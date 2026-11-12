@@ -53,10 +53,12 @@ def main():
         juego.tick()
 
         if juego.estado == game.MENU:
-            screens.dibujar_menu(surface)          # US01
-        else:
+            screens.dibujar_menu(surface)              # US01
+        elif juego.estado == game.JUGANDO:
             surface.fill(config.FONDO_HUD)
-            ui.dibujar_juego(surface, juego)       # US02
+            ui.dibujar_juego(surface, juego)           # US02 + US08
+        else:
+            screens.dibujar_game_over(surface, juego)  # US10
 
         pygame.display.flip()
         reloj.tick(config.FPS)
